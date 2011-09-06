@@ -24,25 +24,25 @@ class XMLDBTestCase < Test::Unit::TestCase
   end
 
    def setup()
-#       
-      database = (Database) c.newInstance()
-      # DatabaseManager.registerDatabase(database);
-#       
-      # col =
-         # DatabaseManager.getCollection(uriPrefix, username, password);
-#       
-      # checkCapabilities(database);            
-      # initRepository();
-# 
-      # col.close();
-#             
-      # col =
-         # DatabaseManager.getCollection(collectionURI, username, password);
-#       
-      # if (col == null) {
-         # System.out.println("Collection could not be created");
-         # System.exit(-1);
-      # }      
+      
+      database = c.new_instance()
+      DatabaseManager.registerDatabase(database);
+      
+      col =
+         DatabaseManager.getCollection(uriPrefix, username, password);
+      
+      checkCapabilities(database);            
+      initRepository();
+
+      col.close();
+            
+      col =
+         DatabaseManager.getCollection(collectionURI, username, password);
+      
+      if (col == null) {
+         System.out.println("Collection could not be created");
+         System.exit(-1);
+      }      
    end
 #    
    def teardown() 
