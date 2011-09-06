@@ -1,0 +1,9 @@
+GEM
+  specs:
+    redis (2.2.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  redis
